@@ -1,15 +1,16 @@
 /* === TOKENS & VARIABLES === */
 :root {
-    --primary: #f05a28; /* Saffron/Orange tone representing BVP */
-    --hover: #d14a1e;
-    --secondary: #1e3a8a; /* Deep blue representing stability & nation */
-    --accent: #10b981; /* Green representing growth and harmony */
+    --primary: #d35400; /* Deep Saffron/Orange tone for better contrast */
+    --strong-saffron: #eb8022; /* BVP brand saffron */
+    --hover: #e65100;
+    --secondary: #000080; /* BVP Navy Blue for strong nationalist contrast */
+    --accent: #138808; /* BVP Indian Green */
     
-    --bg-light: #f8fafc;
-    --bg-dark: #0f172a;
-    --text-main: #334155;
-    --text-heading: #0f172a;
-    --text-light: #94a3b8;
+    --bg-light: #f4f7fb;
+    --bg-dark: #000033; /* Deep Navy */
+    --text-main: #1e293b;
+    --text-heading: #000080; /* Headings in Navy Blue */
+    --text-light: #475569;
     
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Outfit', sans-serif;
@@ -154,12 +155,12 @@ ul {
 }
 
 .btn-primary {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color: #ffffff;
 }
 
 .btn-primary:hover {
-    background-color: var(--hover);
+    background-color: var(--primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -170,8 +171,9 @@ ul {
     color: #ffffff;
 }
 .btn-secondary:hover {
-    background-color: #ffffff;
-    color: var(--primary);
+    background-color: var(--strong-saffron);
+    border-color: var(--strong-saffron);
+    color: #ffffff;
 }
 
 .btn-outline {
@@ -309,7 +311,7 @@ ul {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to right, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.65));
+    background: linear-gradient(to right, rgba(0, 0, 128, 0.85), rgba(0, 0, 80, 0.65));
 }
 
 .hero-content {
@@ -329,11 +331,12 @@ ul {
 .hero-subtitle {
     font-family: var(--font-body);
     font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--primary);
+    font-weight: 500;
+    color: var(--strong-saffron);
     letter-spacing: 2px;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .hero-text {
@@ -615,7 +618,7 @@ ul {
 
 /* === FOOTER === */
 .footer {
-    background-color: #020617;
+    background-color: var(--secondary);
     color: #ffffff;
     padding: 4rem 0 0;
 }
